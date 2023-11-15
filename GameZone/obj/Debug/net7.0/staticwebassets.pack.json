@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\GameZone.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\bea132a4-9958-4a64-a118-79d51e8b1041..jpg",
-      "PackagePath": "staticwebassets\\Images\\GameImages\\bea132a4-9958-4a64-a118-79d51e8b1041..jpg"
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\056a21cf-4ff4-45be-a4ea-4368758df912..jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\056a21cf-4ff4-45be-a4ea-4368758df912..jpg"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\15ca77f7-26cd-4ba6-986a-f53c4fb6a180..jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\15ca77f7-26cd-4ba6-986a-f53c4fb6a180..jpg"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\57b824ab-955b-49e5-82b6-bdc547217bc8..jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\57b824ab-955b-49e5-82b6-bdc547217bc8..jpg"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\dbe701ec-25ba-47f7-8c89-2784af2096de..jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\dbe701ec-25ba-47f7-8c89-2784af2096de..jpg"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\f6209ba5-7fee-46a4-b11f-0df4e17e7eb1..jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\f6209ba5-7fee-46a4-b11f-0df4e17e7eb1..jpg"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\css\\bootstrap.min.css",
@@ -19,6 +35,14 @@
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\Filesizevalidator.js",
+      "PackagePath": "staticwebassets\\js\\Filesizevalidator.js"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\Game-Form.js",
+      "PackagePath": "staticwebassets\\js\\Game-Form.js"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\site.js",
@@ -251,6 +275,14 @@
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\lib\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\lib\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\lib\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.GameZone.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -17,6 +17,16 @@ namespace GameZone.Services.GameService
             _deviceService = deviceService;
         }
 
+        public IEnumerable<Game> GetGames()
+        {
+            var Games = _appDbContext.Games
+                .Include(c=>c.Category)
+                .Include(c=>c.Devices)
+                .ThenInclude(c=>c.Device)
+                .AsNoTracking().ToList();
+            return Games;
+        }
+
         public async Task AddGame(CreateGameVM game)
         {
             var CoverName = $"{Guid.NewGuid()}.{Path.GetExtension(game.Cover.FileName)}";

@@ -3,5 +3,6 @@
     public interface IGameService
     {
         Task AddGame(CreateGameVM createGame);
+        IEnumerable<Game> GetGames();  
     }
 }

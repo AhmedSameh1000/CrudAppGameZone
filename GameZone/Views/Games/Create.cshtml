@@ -26,8 +26,7 @@
             </div>   
             <div class="form-group">
                 <label asp-for="SelectedDevices" class="form-label mt-4"></label>
-                <select asp-for="SelectedDevices" asp-items="Model?.Devices" class="form-select" id="exampleSelect1">
-                    <option value="" selected disabled>--Select Device</option>
+                <select asp-for="SelectedDevices" asp-items="Model?.Devices" class="myselect form-select " id="exampleSelect1">
                 </select>
                 <span asp-validation-for="SelectedDevices" class="text-danger"></span>
             </div>
@@ -56,43 +55,12 @@
 </form>
 @section Scripts{
   <partial name="_ValidationScriptsPartial.cshtml">
-  <script>
-      $.validator.addMethod('filesize', function (value, ele, param) {
-          return this.optional(ele) || ele.files[0].size <= param
-      });
+   <script src="~/js/filesizevalidator.js" asp-append-version="true"></script>
+   <script src="~/js/game-form.js" asp-append-version="true"></script>
 
-            function uploadImage() {
-                var fileInput = document.getElementById("Cover");
-                var previewImage = document.getElementById("previewImage");
-
-                var file = fileInput.files[0];
-                if (file) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        previewImage.src = e.target.result;
-
-                        // الآن يمكنك إرسال الصورة إلى الخادم إذا كنت بحاجة إلى ذلك.
-                        // يمكنك استخدام AJAX لإرسال الصورة إلى الخادم بشكل غير مزامن.
-                        // على سبيل المثال:
-                        // $.ajax({
-                        //     url: "/YourPageHandler",
-                        //     type: "POST",
-                        //     data: { image: e.target.result },
-                        //     success: function(response) {
-                        //         console.log("Image uploaded successfully");
-                        //     },
-                        //     error: function(error) {
-                        //         console.error("Error uploading image: ", error);
-                        //     }
-                        // });
-                    };
-
-                    reader.readAsDataURL(file);
-                }
-            }
-
-  </script>
-
-
+   <script>
+         $(".myselect").select2({
+          
+         });
+   </script>
 }

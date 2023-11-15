@@ -20,10 +20,10 @@ namespace GameZone.Controllers
             _gameService = gameService;
         }
 
-        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var Games = _gameService.GetGames();
+            return View(Games);
         }
 
         [HttpGet]

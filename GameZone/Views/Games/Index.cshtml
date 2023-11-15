@@ -1,7 +1,48 @@
-﻿@{
+﻿@using GameZone.Settings;
+@model IEnumerable<Game>
+@{
     ViewData["Title"] = "Games";
 }
-
 <a class="btn btn-secondary btn btn-lg" asp-action="Create">
     <i class="fa-solid fa-square-plus me-2"></i> Add Game
 </a>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning mt-5">
+        <h4 class="alert-heading">No Games!</h4>
+        <p class="mb-0">No Games Where Added Yet </p>
+    </div>
+}
+else
+{
+    <div class="mt-5">
+
+        <table class="table table-bordered border-primary">
+            <tbody>
+                @foreach (var Game in Model)
+                {
+                    <tr class="border-1 border-success">
+                        <td>
+                            <div class="d-flex p-1">
+                                <div >
+                                    <img style="width:160px" class="h-100" src=@($"{FileSettings.ImagePath}{Game.Cover}")  />
+                                </div>
+                                <div class="ps-3 d-flex flex-column justify-content-center">
+                                    <h4 class="text-light">@Game.Name</h4>
+                                    <h5 class="text-light">@Game.Category.Name</h5>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle text-end me-2">
+                            <a class="btn btn-info rounded rounded-3 me-2" href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a class="btn btn-danger rounded rounded-3 " href="#"><i class="fa-solid fa-trash-can"></i></a>
+                         
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+     
+}

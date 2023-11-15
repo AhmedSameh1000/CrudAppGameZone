@@ -1,8 +1,40 @@
-﻿@{
+﻿@using GameZone.Settings;
+@model IEnumerable<Game>
+@{
     ViewData["Title"] = "Home Page";
 }
+@if (!Model.Any())
+{
+    <div class="alert alert-warning mt-5">
+        <h4 class="alert-heading">No Games!</h4>
+        <p class="mb-0">No Games Where Added Yet </p>
+    </div>
+}
+else
+{
+    <div class="row mt-5 m-auto">
+        @foreach (var Game in Model)
+        {
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="m-auto card border-success mb-3" style="max-width: 20rem;">
+                    <div class="card-body" style="background-image:url(@($"{FileSettings.ImagePath}{Game.Cover}"));background-size:cover;background-position:center;height:300px">
+                      <div class="h-100 d-flex align-items-end fs-3">
+                            <span class="badge bg-secondary rounded-0">@Game.Category?.Name</span>
+                      </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h5>@Game.Name</h5>
+                         <div >
+                             @foreach (var Device in Game.Devices)
+                            {
+                                <i class="@Device.Device.Icon me-2 fs-4"></i>
+                            }
+                         </div>
+                    </div>
+                </div>
+            </div> 
+        }
+    </div>
+}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+

@@ -24,3 +24,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+.select2-selection__choice,
+.select2-results__option {
+    color: black
+}
+.selection .select2-selection {
+    background-color: #30115e;
+    border: none
+}
+.select2 {
+    max-width:100% !important
+}
+
