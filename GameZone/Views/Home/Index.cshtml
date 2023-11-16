@@ -12,15 +12,15 @@
 }
 else
 {
-    <div class="row mt-5 m-auto">
+    <div class="row mt-5">
         @foreach (var Game in Model)
         {
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="m-auto card border-success mb-3" style="max-width: 20rem;">
-                    <div class="card-body" style="background-image:url(@($"{FileSettings.ImagePath}{Game.Cover}"));background-size:cover;background-position:center;height:300px">
+            <div  class="col-12 col-md-6 col-lg-4" style="cursor:pointer">
+                <a asp-controller="Games" asp-action="Details" asp-route-id="@Game.Id" class="m-auto card border-success mb-3" style="max-width: 20rem;text-decoration:none">
+                    <div class="card-body" style="background-image:url(@($"{FileSettings.ImagePath}/{Game.Cover}"));background-size:cover;background-position:center;height:300px">
                       <div class="h-100 d-flex align-items-end fs-3">
                             <span class="badge bg-secondary rounded-0">@Game.Category?.Name</span>
-                      </div>
+                       </div>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <h5>@Game.Name</h5>
@@ -31,7 +31,7 @@ else
                             }
                          </div>
                     </div>
-                </div>
+                </a>
             </div> 
         }
     </div>

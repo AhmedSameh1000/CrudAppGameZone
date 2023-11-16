@@ -20,16 +20,16 @@ namespace GameZone.Services.GameService
         public IEnumerable<Game> GetGames()
         {
             var Games = _appDbContext.Games
-                .Include(c=>c.Category)
-                .Include(c=>c.Devices)
-                .ThenInclude(c=>c.Device)
+                .Include(c => c.Category)
+                .Include(c => c.Devices)
+                .ThenInclude(c => c.Device)
                 .AsNoTracking().ToList();
             return Games;
         }
 
         public async Task AddGame(CreateGameVM game)
         {
-            var CoverName = $"{Guid.NewGuid()}.{Path.GetExtension(game.Cover.FileName)}";
+            var CoverName = $"{Guid.NewGuid()}{Path.GetExtension(game.Cover.FileName)}";
             var path = Path.Combine(_webHostEnvironment.WebRootPath, "Images", "GameImages", CoverName);
 
             /*
@@ -53,6 +53,16 @@ namespace GameZone.Services.GameService
             };
             _appDbContext.Games.Add(Game);
             _appDbContext.SaveChanges();
+        }
+
+        public Game? GetGameById(int Id)
+        {
+            return _appDbContext.Games
+                .Include(c => c.Category)
+                .Include(c => c.Devices)
+                .ThenInclude(c => c.Device)
+                .AsNoTracking()
+                .FirstOrDefault(c => c.Id == Id);
         }
     }
 }

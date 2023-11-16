@@ -1,29 +1,29 @@
 ﻿@using GameZone.Settings;
-@model CreateGameVM;
+@model UpdateGameVM;
 @{
-    ViewData["Title"] = "Add Game";
+    ViewData["Title"] = "Update Game";
 }
 <h5>
-    <i class="fa-solid fa-square-plus me-2"></i> Add new Game
+    <i class="fa-solid fa-square-plus me-2"></i> Update Game
 </h5>
 
 <form asp-controller="Games" enctype="multipart/form-data">
 
     <div class="row">
-        <div class="col-md-6"> 
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="Name" class="form-label mt-4"></label>
-                <input type="text" asp-for="Name" class="form-control"  placeholder="Enter Name">
+                <input type="text" asp-for="Name" class="form-control" placeholder="Enter Name">
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
                 <label asp-for="CategoryId" class="form-label mt-4"></label>
                 <select asp-for="CategoryId" asp-items="Model?.Categories" class="form-select" id="exampleSelect1">
                     <option value="" selected disabled>--Select Category</option>
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>   
+            </div>
             <div class="form-group">
                 <label asp-for="SelectedDevices" class="form-label mt-4"></label>
                 <select asp-for="SelectedDevices" asp-items="Model?.Devices" class="myselect form-select " id="exampleSelect1">
@@ -32,13 +32,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="form-label mt-4"></label>
-                <textarea type="text" asp-for="Description" class="form-control" placeholder="Enter Description"></textarea>
+                <textarea  type="text" asp-for="Description" class="form-control" style="height:150px" placeholder="Enter Description"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Cover" class="form-label mt-4"></label>
-                <input onchange="uploadImage()"
-                    data-rule-extension="@FileSettings.AllowedExtension.Replace(".", string.Empty)"
+                <input 
+                       data-rule-extension="@FileSettings.AllowedExtension.Replace(".", string.Empty)"
                        data-msg-extension="Not allowed extension"
                        data-rule-filesize="@FileSettings.MaxFileSizeInBytes"
                        data-msg-filesize="Max Allowed Size is @FileSettings.MaxFileSizeInMB" MB
@@ -48,14 +48,15 @@
             <button class="btn btn-light text-black mt-4">Create</button>
         </div>
         <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <img  class="cover-preview w-75 h-75" />
+            <img  class="cover-preview w-75 h-75" src="@($"{FileSettings.ImagePath}/{Model.ImageUrl}")" />
         </div>
-    
+
     </div>
 </form>
+ 
 @section Scripts{
-  <partial name="_ValidationScriptsPartial.cshtml">
-   <script src="~/js/filesizevalidator.js" asp-append-version="true"></script>
+    <partial name="_ValidationScriptsPartial.cshtml">
+        <script src="~/js/filesizevalidator.js" asp-append-version="true"></script>
 
         <script>
             $(document).ready(function () {
@@ -66,9 +67,9 @@
 
         </script>
 
-   <script>
-         $(".myselect").select2({
-          
-         });
-   </script>
-}
+        <script>
+            $(".myselect").select2({
+
+            });
+        </script>
+    }

@@ -20,6 +20,7 @@ namespace GameZone.Controllers
             _gameService = gameService;
         }
 
+        [Route("Games")]
         public IActionResult Index()
         {
             var Games = _gameService.GetGames();
@@ -52,6 +53,38 @@ namespace GameZone.Controllers
             await _gameService.AddGame(createGame);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Details(int id)
+        {
+            var Game = _gameService.GetGameById(id);
+
+            if (Game is null)
+                return NotFound();
+            return View(Game);
+        }
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var GameToUpdate = _gameService.GetGameById(id);
+            if (GameToUpdate is null)
+                return NotFound();
+
+            var ViewModelToUpdate = new UpdateGameVM()
+            {
+                Id = id,
+                Description = GameToUpdate.Description,
+                CategoryId = GameToUpdate.CategoryId,
+                SelectedDevices = GameToUpdate.Devices.Select(d => d.DeviceId).ToList(),
+                Name = GameToUpdate.Name,
+                Devices = _deviceService.GetSelectListDevices(),
+                Categories = _categoriesService.GetSelectListCategories(),
+                ImageUrl = GameToUpdate.Cover
+            };
+           
+            return View(ViewModelToUpdate);
         }
     }
 }

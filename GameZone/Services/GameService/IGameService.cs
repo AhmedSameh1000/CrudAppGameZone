@@ -3,6 +3,9 @@
     public interface IGameService
     {
         Task AddGame(CreateGameVM createGame);
-        IEnumerable<Game> GetGames();  
+
+        IEnumerable<Game> GetGames();
+
+        Game? GetGameById(int Id);
     }
 }

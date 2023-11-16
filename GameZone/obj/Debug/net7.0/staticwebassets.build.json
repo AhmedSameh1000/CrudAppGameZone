@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fP4cXBJWsz1YY5BslibhI/Cn/0il3JHsoDv/eAvhksc=",
+  "Hash": "fr6KT320U1ra/gk20le6xSfjSEHlEk+rWBK0NoaCFnY=",
   "Source": "GameZone",
   "BasePath": "_content/GameZone",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\01f14b01-50c4-48fe-a493-8c93408435d9..jpg",
+      "SourceId": "GameZone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\",
+      "BasePath": "_content/GameZone",
+      "RelativePath": "Images/GameImages/01f14b01-50c4-48fe-a493-8c93408435d9..jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\GameImages\\01f14b01-50c4-48fe-a493-8c93408435d9..jpg"
+    },
+    {
       "Identity": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\056a21cf-4ff4-45be-a4ea-4368758df912..jpg",
       "SourceId": "GameZone",
       "SourceType": "Discovered",
@@ -134,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\GameImages\\15ca77f7-26cd-4ba6-986a-f53c4fb6a180..jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\49ea63eb-f237-4e8d-b427-9e781f67712f.jpg",
+      "SourceId": "GameZone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\",
+      "BasePath": "_content/GameZone",
+      "RelativePath": "Images/GameImages/49ea63eb-f237-4e8d-b427-9e781f67712f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\GameImages\\49ea63eb-f237-4e8d-b427-9e781f67712f.jpg"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\57b824ab-955b-49e5-82b6-bdc547217bc8..jpg",
@@ -202,23 +236,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Filesizevalidator.js"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\Game-Form.js",
-      "SourceId": "GameZone",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\",
-      "BasePath": "_content/GameZone",
-      "RelativePath": "js/Game-Form.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Game-Form.js"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\site.js",

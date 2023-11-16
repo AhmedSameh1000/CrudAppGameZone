@@ -14,7 +14,7 @@
         <p class="mb-0">No Games Where Added Yet </p>
     </div>
 }
-else
+else 
 {
     <div class="mt-5">
 
@@ -26,7 +26,7 @@ else
                         <td>
                             <div class="d-flex p-1">
                                 <div >
-                                    <img style="width:160px" class="h-100" src=@($"{FileSettings.ImagePath}{Game.Cover}")  />
+                                    <img style="width:160px" class="h-100" src=@($"{FileSettings.ImagePath}/{Game.Cover}")  />
                                 </div>
                                 <div class="ps-3 d-flex flex-column justify-content-center">
                                     <h4 class="text-light">@Game.Name</h4>
@@ -35,9 +35,10 @@ else
                             </div>
                         </td>
                         <td class="align-middle text-end me-2">
-                            <a class="btn btn-info rounded rounded-3 me-2" href="#"><i class="fa-regular fa-pen-to-square"></i></a>
-                            <a class="btn btn-danger rounded rounded-3 " href="#"><i class="fa-solid fa-trash-can"></i></a>
-                         
+                          <div>
+                                <a class="btn btn-info rounded rounded-3 me-2" asp-action="Update" asp-route-id="@Game.Id" ><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="btn btn-danger rounded rounded-3" asp-action="Update" asp-route-id="@Game.Id"><i class="fa-solid fa-trash-can"></i></a>
+                          </div>
                         </td>
                     </tr>
                 }

@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\GameZone.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\01f14b01-50c4-48fe-a493-8c93408435d9..jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\01f14b01-50c4-48fe-a493-8c93408435d9..jpg"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\056a21cf-4ff4-45be-a4ea-4368758df912..jpg",
       "PackagePath": "staticwebassets\\Images\\GameImages\\056a21cf-4ff4-45be-a4ea-4368758df912..jpg"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\15ca77f7-26cd-4ba6-986a-f53c4fb6a180..jpg",
       "PackagePath": "staticwebassets\\Images\\GameImages\\15ca77f7-26cd-4ba6-986a-f53c4fb6a180..jpg"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\49ea63eb-f237-4e8d-b427-9e781f67712f.jpg",
+      "PackagePath": "staticwebassets\\Images\\GameImages\\49ea63eb-f237-4e8d-b427-9e781f67712f.jpg"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\Images\\GameImages\\57b824ab-955b-49e5-82b6-bdc547217bc8..jpg",
@@ -39,10 +47,6 @@
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\Filesizevalidator.js",
       "PackagePath": "staticwebassets\\js\\Filesizevalidator.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\Game-Form.js",
-      "PackagePath": "staticwebassets\\js\\Game-Form.js"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\CrudApp\\GameZone\\GameZone\\wwwroot\\js\\site.js",
