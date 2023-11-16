@@ -7,5 +7,9 @@
         IEnumerable<Game> GetGames();
 
         Game? GetGameById(int Id);
+
+        Task<Game?> Update(UpdateGameVM Model);
+
+        bool Delete(int Id);
     }
 }

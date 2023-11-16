@@ -1,6 +1,8 @@
 ﻿using GameZone.Services.DeviceService;
 using GameZone.Services.GameService;
 using GameZone.Services.NewFolder;
+using GameZone.Settings;
+using GameZone.ViewModels;
 
 namespace GameZone.Controllers
 {
@@ -9,15 +11,18 @@ namespace GameZone.Controllers
         private readonly ICategoriesService _categoriesService;
         private readonly IDeviceService _deviceService;
         private readonly IGameService _gameService;
+        private readonly IWebHostEnvironment _webHost;
 
         public GamesController(
             ICategoriesService categoriesService
             , IDeviceService deviceService,
-            IGameService gameService)
+            IGameService gameService,
+            IWebHostEnvironment webHost)
         {
             _categoriesService = categoriesService;
             _deviceService = deviceService;
             _gameService = gameService;
+            _webHost = webHost;
         }
 
         [Route("Games")]
@@ -83,8 +88,35 @@ namespace GameZone.Controllers
                 Categories = _categoriesService.GetSelectListCategories(),
                 ImageUrl = GameToUpdate.Cover
             };
-           
+
             return View(ViewModelToUpdate);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(UpdateGameVM Game)
+        {
+            if (!ModelState.IsValid)
+            {
+                Game.Categories = _categoriesService.GetSelectListCategories();
+                Game.Devices = _deviceService.GetSelectListDevices();
+                return View(Game);
+            }
+
+            var game = await _gameService.Update(Game);
+
+            if (game == null)
+            {
+                return BadRequest();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var isDeleted = _gameService.Delete(id);
+
+            return isDeleted ? Ok() : BadRequest();
         }
     }
 }

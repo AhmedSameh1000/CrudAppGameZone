@@ -45,7 +45,7 @@
                        type="file" asp-for="Cover" class="form-control">
                 <span asp-validation-for="Cover" class="text-danger"></span>
             </div>
-            <button class="btn btn-light text-black mt-4">Create</button>
+            <button class="btn btn-light text-black mt-4">Save</button>
         </div>
         <div class="col-md-6 d-flex justify-content-center align-items-center">
             <img  class="cover-preview w-75 h-75" src="@($"{FileSettings.ImagePath}/{Model.ImageUrl}")" />
